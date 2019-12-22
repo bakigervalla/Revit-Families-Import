@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Revon.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FileURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://res.cloudinary.com/bimsystem/raw/upload/v1571004262/documents/families/FN-Seating_Armchair.rfa</Value>
+    </Setting>
+    <Setting Name="ThumbnailURL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://res.cloudinary.com/bimsystem/image/upload/v1571004679/documents/images/257.jpg</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
