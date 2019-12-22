@@ -4,4 +4,4 @@
 # Demo
 ![Sample screenshot](https://github.com/bakigervalla/Revit-Families-Import/blob/master/Revon.UI/Resources/snapshot.png)
 
-![Demo video](https://tinyurl.com/tc5kgqa?raw=true "Demo video")
+![my directory](https://github.com/bakigervalla/Revit-Families-Import/blob/master/Revon.UI/Resources/Revon.mov)
