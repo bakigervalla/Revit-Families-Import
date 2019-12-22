@@ -4,7 +4,6 @@
 # Demo
 ![Sample screenshot](https://github.com/bakigervalla/Revit-Families-Import/blob/master/Revon.UI/Resources/snapshot.png)
 
-[text-1][ref-1]
-###Demo Video
-[ref-1]: https://tinyurl.com/tc5kgqa
-
+Markdown:
+[Demo Video][reference-id-for-demo-video]
+[reference-id-for-demo-video]: https://tinyurl.com/tc5kgqa
