@@ -3,6 +3,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>E:\Program Files\Autodesk\Revit 2020\Revit.exe</StartProgram>
-    <StartArguments>C:\Users\BGERVALLA\Downloads\ViewFilters.rvt</StartArguments>
+    <StartArguments>
+    </StartArguments>
   </PropertyGroup>
 </Project>

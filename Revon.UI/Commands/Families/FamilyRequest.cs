@@ -22,6 +22,10 @@ namespace Revon.UI
         /// "CrateFamily" request
         /// </summary>
         Create = 2,
+        /// <summary>
+        /// "GetCategories" request
+        /// </summary>
+        Summary = 3,
     }
 
     /// <summary>

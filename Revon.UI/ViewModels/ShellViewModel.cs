@@ -1,4 +1,5 @@
-﻿using Caliburn.Micro;
+﻿using Autodesk.Revit.UI;
+using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,14 @@ namespace Revon.UI.ViewModels
 {
     public class ShellViewModel : Conductor<object>
     {
-        
-        public ShellViewModel()
+
+        public UIApplication _uiapp;
+
+        public ShellViewModel(UIApplication uiapp)
         {
-            ActivateItem(new ImportViewModel(this));
+            _uiapp = uiapp;
+
+            ActivateItem(new SummaryViewModel(this, uiapp));
             Request = new FamilyRequest();
         }
 
@@ -24,6 +29,11 @@ namespace Revon.UI.ViewModels
         public void GoToSettingsPage()
         {
             ActivateItem(new SettingsViewModel(this));
+        }
+
+        public void GoToFamiliesSummary()
+        {
+            ActivateItem(new SummaryViewModel(this, _uiapp));
         }
 
         #region request

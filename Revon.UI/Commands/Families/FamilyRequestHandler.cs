@@ -43,6 +43,11 @@ namespace Revon.UI
                         CreateFamily(uiapp, "Create Family", e => e.flipHand());
                         break;
                     }
+                case RequestId.Summary:
+                    {
+                        Summary(uiapp, "Get Families");
+                        break;
+                    }
                 default:
                     {
                         // some kind of a warning here should
@@ -52,6 +57,48 @@ namespace Revon.UI
             }
 
             return;
+        }
+
+        private static void Summary(UIApplication uiapp, String text)
+        {
+            UIDocument uidoc = uiapp.ActiveUIDocument;
+
+            if ((uidoc != null))
+            {
+                Family family = null;
+
+                // Load family from file:
+                using (Transaction trans = new Transaction(uidoc.Document))
+                {
+
+                    if (trans.Start(text) == TransactionStatus.Started)
+                    {
+                        bool isload = uidoc.Document.LoadFamily(familyFile, out family);
+                        if (!isload)
+                            throw new Exception("Unable to load family.");
+
+
+                        //loop trough door symbols and add a new table
+                        ISet<ElementId> familySymbolIds = family.GetFamilySymbolIds();
+                        double x = 0.0, y = 0.0;
+                        foreach (ElementId id in familySymbolIds)
+                        {
+                            FamilySymbol symbol = family.Document.GetElement(id) as FamilySymbol;
+                            XYZ location = new XYZ(x, y, 0);
+
+                            if (!symbol.IsActive)
+                            { symbol.Activate(); uidoc.Document.Regenerate(); }
+
+                            FamilyInstance instance = uidoc.Document.Create.NewFamilyInstance(location, symbol, StructuralType.NonStructural);
+
+                        }
+
+                    }
+
+                    trans.Commit();
+                }
+
+            }
         }
 
         private static void CreateFamily(UIApplication uiapp, String text, DoorOperation operation)

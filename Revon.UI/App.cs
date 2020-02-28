@@ -113,7 +113,7 @@ namespace Revon.UI
 
             if (shellForm == null || !shellForm.IsVisible)
             {
-                shellViewModel = new ShellViewModel();
+                shellViewModel = new ShellViewModel(uiapp);
                 new WindowManager().ShowWindow(shellViewModel);
 
                 ChangeMergeDefaultAppConfig();

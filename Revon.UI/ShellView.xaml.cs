@@ -21,13 +21,13 @@ namespace Revon.UI.Views
 
         }
 
-        //App app;
+        App app;
 
-        //public ShellView(App _app)
-        //{
-        //    app = _app;
-        //    InitializeComponent();
-        //}
+        public ShellView(App _app)
+        {
+            app = _app;
+            InitializeComponent();
+        }
 
     }
 }
